@@ -1,5 +1,14 @@
 import React, { useState, useMemo } from 'react';
 
+// Tailwind CSS color palette
+// const colors = {
+//   primary: '#3B82F6',      // Bright blue
+//   secondary: '#10B981',    // Emerald green
+//   background: '#F0F9FF',   // Light blue background
+//   text: '#1F2937',         // Dark gray for text
+//   accent: '#4338CA',       // Deep indigo
+//   muted: '#6B7280',        // Gray for secondary text
+// };
 
 interface Inputs {
   totalDays: string;
@@ -109,83 +118,126 @@ const AttendanceCalculator: React.FC = () => {
     };
 
     return (
-      <div>
-        <p>Current Attendance Percentage: {currentAttendance}%</p>
+      <div className="bg-white rounded-lg shadow-md p-6 mt-6 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">Current Performance</h3>
+            <p className="text-gray-700">
+              Current Attendance: 
+              <span className={`font-bold ml-2 ${parseFloat(currentAttendance) >= 75 ? 'text-green-600' : 'text-red-600'}`}>
+                {currentAttendance}%
+              </span>
+            </p>
+          </div>
+
+          <div className="bg-green-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-green-800 mb-2">Projection</h3>
+            <p className="text-gray-700">
+              Projected Attendance: 
+              <span className="font-bold ml-2 text-blue-700">
+                {projectedAttendance}%
+              </span>
+            </p>
+          </div>
+        </div>
+
         {parseFloat(currentAttendance) < 74.9 && (
-          <>
-            <p>Is it possible to achieve &gt;75% attendance?: {isAchievable ? 'Yes' : 'No'}</p>
-            <p>Additional Days Needed for &gt;75% Attendance: {additionalDaysNeeded} days</p>
-          </>
+          <div className="bg-yellow-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-yellow-800 mb-2">Attendance Alert</h3>
+            <p className="text-gray-700">
+              Achievable &gt;75%: 
+              <span className={`font-bold ml-2 ${isAchievable ? 'text-green-600' : 'text-red-600'}`}>
+                {isAchievable ? 'Yes' : 'No'}
+              </span>
+            </p>
+            <p className="text-gray-700 mt-2">
+              Additional Days Needed: 
+              <span className="font-bold ml-2 text-blue-700">
+                {additionalDaysNeeded} days
+              </span>
+            </p>
+          </div>
         )}
-        {parseFloat(currentAttendance) > 76.1 && (
-          <p>You can take up to {remainingLeaves} leaves and still maintain over 75% attendance.</p>
-        )}
-        <p>Projected Attendance if attending all remaining days: {projectedAttendance}%</p>
-        <p>Impact of Attending One Additional Day: {impactOfAdditionalDays}%</p>
-        <p>Attendance Advice: {generateAdvice()}</p>
+
+        <div className="bg-indigo-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold text-indigo-800 mb-2">Insights</h3>
+          <p className="text-gray-700">
+            Impact of One Additional Day: 
+            <span className="font-bold ml-2 text-blue-700">
+              {impactOfAdditionalDays}%
+            </span>
+          </p>
+          {parseFloat(currentAttendance) > 76.1 && (
+            <p className="text-gray-700 mt-2">
+              Leaves Possible: 
+              <span className="font-bold ml-2 text-green-600">
+                {remainingLeaves} days
+              </span>
+            </p>
+          )}
+        </div>
+
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <h3 className="text-lg font-semibold text-purple-800 mb-2">Advice</h3>
+          <p className="text-gray-700">{generateAdvice()}</p>
+        </div>
       </div>
     );
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 attendance-calculator-body">
-      <h2 className="text-3xl font-bold mb-4 attendance-calculator-title">Attendance Calculator</h2>
-      <div className="bg-e8e8e2 rounded-lg shadow-lg p-8">
-        <div id='note'>
-          <h1>Note: There's generally total 90-100 days in a semester or check in Academic calendar</h1>
-        </div>
-        
-        <div className="mb-4">
-          <label htmlFor="totalDays" className="block text-lg font-bold mb-2">
-            Total Number of Days in Semester:
-          </label>
-          <input
-            type="number"
-            id="totalDays"
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-            placeholder="Enter total number of days in semester"
-            value={inputs.totalDays}
-            onChange={handleInputChange}
-          />
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-blue-600 text-white p-6">
+          <h2 className="text-3xl font-bold text-center">Attendance Calculator</h2>
         </div>
 
-        <div className="mb-4">
-          <label htmlFor="daysHostedByCollege" className="block text-lg font-bold mb-2">
-            Number of Days Hosted by College as of Today:
-          </label>
-          <input
-            type="number"
-            id="daysHostedByCollege"
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-            placeholder="Enter number of days hosted by college"
-            value={inputs.daysHostedByCollege}
-            onChange={handleInputChange}
-          />
-        </div>
+        <div className="p-8 space-y-6">
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <p className="text-gray-700 italic">
+              💡 Note: Typically, a semester has 90-100 days. Check your academic calendar for precise details.
+            </p>
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="daysAttended" className="block text-lg font-bold mb-2">
-            Number of Days you Attended as of Today:
-          </label>
-          <input
-            type="number"
-            id="daysAttended"
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
-            placeholder="Enter number of days attended"
-            value={inputs.daysAttended}
-            onChange={handleInputChange}
-          />
-        </div>
+          <div className="space-y-4">
+            {/* Input Fields */}
+            {(['totalDays', 'daysHostedByCollege', 'daysAttended'] as const).map((field) => (
+              <div key={field}>
+                <label 
+                  htmlFor={field} 
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  {field === 'totalDays' ? 'Total Days in Semester' : 
+                   field === 'daysHostedByCollege' ? 'Days Hosted by College' : 
+                   'Days You Attended'}
+                </label>
+                <input
+                  type="number"
+                  id={field}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                             focus:outline-none focus:ring-2 focus:ring-blue-500 
+                             transition duration-300"
+                  placeholder={`Enter ${field === 'totalDays' ? 'total days' : 
+                                field === 'daysHostedByCollege' ? 'college days' : 
+                                'attended days'}`}
+                  value={inputs[field]}
+                  onChange={handleInputChange}
+                />
+              </div>
+            ))}
+          </div>
 
-        <button
-          type="button"
-          className="bg-[#2d2932] text-white font-bold py-2 px-4 rounded hover:bg-[#2d4048]"
-          onClick={calculateAttendance}
-        >
-          Calculate
-        </button>
-        
-        <div className="mt-6">
+          <button
+            onClick={calculateAttendance}
+            className="w-full bg-blue-600 text-white py-3 rounded-lg 
+                       hover:bg-blue-700 transition duration-300 
+                       flex items-center justify-center space-x-2 
+                       focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span>Calculate Attendance</span>
+          </button>
+
+          {/* Results Section */}
           {renderAttendanceResults()}
         </div>
       </div>
