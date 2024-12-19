@@ -1,6 +1,10 @@
+// import React from "react";
+
 function Hero(){
     return (
-        <div> <h1>helllo wrold </h1></div>
+        <div>
+            <img  src="/hero.jpg" alt="" />
+        </div>
     );
 }
 
