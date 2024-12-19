@@ -13,7 +13,7 @@ const Calendar: React.FC = () => {
   };
 
   return (
-    <div className="max-w-none max-h-min mx-auto mt-10 p-5 bg-blue-50 rounded-lg shadow-lg">
+    <div className="max-w-none max-h-min mx-auto mt-10 p-5 bg-white rounded-lg shadow-lg">
       {/* Header */}
       <h2 className="text-2xl font-bold text-center text-white bg-blue-600 rounded-t-md py-2">
         {today.toLocaleDateString("default", { month: "long", year: "numeric" })}
