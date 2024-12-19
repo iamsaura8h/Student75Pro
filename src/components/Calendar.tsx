@@ -13,14 +13,14 @@ const Calendar: React.FC = () => {
   };
 
   return (
-    <div className="max-w-none max-h-min mx-auto mt-10 p-5 bg-white rounded-lg shadow-lg">
+    <div className="max-w-none max-h-min mx-auto mt-10 p-5 bg-white rounded-lg shadow-xl">
       {/* Header */}
       <h2 className="text-2xl font-bold text-center text-white bg-blue-600 rounded-t-md py-2">
         {today.toLocaleDateString("default", { month: "long", year: "numeric" })}
       </h2>
 
       {/* Calendar Grid */}
-      <div className="grid grid-cols-7 gap-2 p-4 bg-gray-50">
+      <div className="grid grid-cols-7 gap-2 p-4 bg-gray-50 shadow-md">
         {/* Weekdays */}
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
           <div key={day} className="text-sm font-medium text-gray-500 text-center">

@@ -5,7 +5,7 @@ const Description: React.FC = () => {
   return (
     <div className="max-w-lg max-h-min mx-auto mt-6 p-5 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-center text-white bg-blue-600 rounded-t-md py-2">
-        How This Calendar Helps
+        How This App Helps
       </h2>
       <div className="p-4 bg-gray-50 rounded-b-md">
         <p className="text-gray-700 mb-4">
@@ -30,7 +30,7 @@ const Description: React.FC = () => {
         </p>
         <div className="mt-4 text-center">
           <button className="bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700">
-            Start Using the Calendar
+            Start Using the App
           </button>
         </div>
       </div>
