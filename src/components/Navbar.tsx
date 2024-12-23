@@ -5,10 +5,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Roadmaps', href: '#roadmaps' },
-    { label: 'DSA', href: '#dsa' },
-    { label: 'Development', href: '#development' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Roadmaps', href: 'roadmaps' },
+    { label: 'DSA', href: ' dsa' },
+    { label: 'Development', href: 'development' },
+    { label: 'Contact', href: 'contact' }
   ];
 
   return (
