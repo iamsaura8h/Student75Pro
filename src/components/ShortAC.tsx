@@ -174,7 +174,7 @@ const ShortAC: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen pt-8 pb-3 px-2">
+    <div className="md:min-h-screen pt-8 pb-3 px-2">
       <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl border-2 overflow-hidden">
         <div className="p-8 space-y-6">
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
