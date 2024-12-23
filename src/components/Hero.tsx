@@ -15,7 +15,7 @@ function Hero() {
       </div>
 
       {/* Right Image Section */}
-      <div className="w-full mt-8 flex justify-end">
+      <div className="w-full mt-8 flex justify-center">
         <img
           src="/hero.jpg"
           alt="Hero Image"
