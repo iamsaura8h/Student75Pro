@@ -53,8 +53,8 @@ const DSA = () => {
   ];
 
   return (
-    <div className="min-w-screen min-h-screen p-12">
-        <h1 className="text-4xl font-giest font-semibold p-4">Best DSA Playlists</h1>
+    <div className="min-w-screen min-h-screen px-10 py-5">
+        <h1 className="text-4xl font-giest font-semibold py-8">Best DSA Playlists</h1>
       <div className="flex flex-wrap gap-6">
         {videos.map((video) => (
           <VideoCard key={video.videoId} {...video} />
