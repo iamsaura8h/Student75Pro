@@ -3,6 +3,7 @@ import LandingPage1 from './pages/LandingPage1';
 import LandingPage2 from './pages/LandingPage2';
 import DSA from './pages/DSA';
 import Roadmaps from './pages/Roadmaps';
+import Development from './pages/Development';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/" element={<LandingPage2 />} />
         <Route path="/dsa" element={<DSA />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
+        <Route path="/development" element={<Development />} />
       </Routes>
     </Router>
   );
