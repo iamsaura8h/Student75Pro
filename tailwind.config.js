@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily:{
         sans:["Open Sans", "sans-serif"],
-        montserrat: ['Montserrat', 'sans-serif']
+        montserrat: ['Montserrat', 'sans-serif'],
+        ptsans:["Pt Sans","sans-serif"]
       }
     },
   },

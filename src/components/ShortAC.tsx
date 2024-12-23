@@ -212,7 +212,7 @@ const ShortAC: React.FC = () => {
 
           <button
             onClick={calculateAttendance}
-            className="w-full bg-green-600 text-white py-3 rounded-lg 
+            className="w-full bg-[#FF735C] text-white py-3 rounded-lg 
                        hover:bg-green-700 transition duration-300 
                        flex items-center justify-center space-x-2 
                        focus:outline-none focus:ring-2 focus:ring-green-500"
