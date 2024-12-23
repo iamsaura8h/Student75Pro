@@ -1,9 +1,9 @@
 function Hero() {
   return (
-    <div className="flex items-center justify-between h-2/3 px-16 flex-col md:flex-row">
+    <div className="flex items-center justify-between h-2/3 lg:px-16 flex-col md:flex-row">
       {/* Left Text Section */}
-      <div className="flex flex-col w-2/3 space-y-3 ">
-        <h2 className="text-2xl lg:text-5xl text-black font-bold">
+      <div className="flex flex-col lg:w-2/3 space-y-3 ">
+        <h2 className="text-4xl lg:text-5xl text-black font-bold">
           Forget College, Get Ahead
         </h2>
         <p className="text-gray-500 text-sm">
