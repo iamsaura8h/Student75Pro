@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <div className="flex items-center justify-between h-2/3 px-16">
+    <div className="flex items-center justify-between h-2/3 px-16 flex-col md:flex-row">
       {/* Left Text Section */}
       <div className="flex flex-col w-2/3 space-y-3 ">
         <h2 className="text-2xl lg:text-5xl text-black font-bold">

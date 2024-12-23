@@ -1,33 +1,74 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
-function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: 'Roadmaps', href: '#roadmaps' },
+    { label: 'DSA', href: '#dsa' },
+    { label: 'Development', href: '#development' },
+    { label: 'Contact', href: '#contact' }
+  ];
 
   return (
     <>
-      <header className="flex justify-between items-center w-screen px-8 py-2 bg-white shadow-md">
-        <div className="font-bold font-montserrat text-3xl text-green-600">Student75</div>
+      <header className="fixed top-0 w-full bg-white shadow-md py-2 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <a href="/" className="flex items-center">
+              <span className="font-bold font-montserrat text-2xl sm:text-3xl text-green-600">
+                Student75
+              </span>
+            </a>
 
-        <nav className="relative">
-          {/* Hamburger Menu for mobile */}
-          <button
-            className="lg:hidden text-3xl"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            ☰
-          </button>
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
 
-          {/* Desktop Navbar */}
-          <ul className={`flex gap-16 mr-16 text-md lg:flex ${isMenuOpen ? "absolute top-16 right-8 bg-white shadow-md p-4" : "block"}`}>
-            <li className="hover:text-green-600 cursor-pointer">Roadmaps</li>
-            <li className="hover:text-green-600 cursor-pointer">DSA</li>
-            <li className="hover:text-green-600 cursor-pointer">Development</li>
-            <li className="hover:text-green-600 cursor-pointer">Contact</li>
-          </ul>
-        </nav>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 text-gray-700 hover:text-green-600"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="lg:hidden absolute left-0 right-0 top-full bg-white shadow-lg border-t">
+              <nav className="flex flex-col max-w-7xl mx-auto">
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-gray-700 hover:text-green-600 hover:bg-gray-50 px-4 py-3 text-base font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+        </div>
       </header>
+      {/* Spacer to prevent content from hiding under the fixed navbar */}
+      <div className="h-16"></div>
     </>
   );
-}
+};
 
 export default Navbar;
