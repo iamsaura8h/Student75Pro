@@ -2,7 +2,7 @@ function Hero() {
   return (
     <div className="flex items-center justify-between h-2/3 px-6 mt-4 lg:px-16 flex-col md:flex-row">
       {/* Left Text Section */}
-      <div className="flex flex-col lg:w-2/3 space-y-4 font-ptsans ">
+      <div className="flex flex-col lg:w-2/3 space-y-4 font-giest ">
         <h2 className="text-4xl lg:text-5xl text-black font-bold ">
         College for Memories, Skills for Placements
         </h2>
@@ -19,7 +19,7 @@ function Hero() {
         <img
           src="/hero.jpg"
           alt="Hero Image"
-          className="w-4/5 h-auto object-contain "
+          className="w-4/5 h-auto object-contain animate-float"
         />
       </div>
     </div>
