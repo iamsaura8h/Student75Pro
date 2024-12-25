@@ -178,7 +178,7 @@ const ShortAC: React.FC = () => {
       <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="p-8 space-y-6">
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-            <p className="text-gray-700 italic">
+            <p className="text-gray-900 italic">
               💡 Note: Typically, a semester has 90-100 days. Check your academic calendar for precise details.
             </p>
           </div>
@@ -188,7 +188,7 @@ const ShortAC: React.FC = () => {
               <div key={field}>
                 <label 
                   htmlFor={field} 
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-semibold text-gray-700 mb-2"
                 >
                   {field === 'totalDays' ? 'Total Days in Semester' : 
                    field === 'daysHostedByCollege' ? 'Days Hosted by College' : 

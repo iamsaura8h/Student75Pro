@@ -6,10 +6,17 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Roadmaps', href: 'roadmaps' },
-    { label: 'DSA', href: ' dsa' },
+    { label: 'DSA', href: 'dsa' },
     { label: 'Development', href: 'development' },
-    { label: 'About', href: 'about' }
+    { label: 'About', id: 'about_view' }
   ];
+
+  const handleScroll = (id: string) => {
+    const targetView = document.getElementById(id.toLowerCase());
+    if (targetView) {
+      targetView.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -29,7 +36,13 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
+                  onClick={(e) => {
+                    if (item.id) {
+                      e.preventDefault(); // Prevent navigation
+                      handleScroll(item.id); // Trigger scroll
+                    }
+                  }}
+                  className="text-gray-700 cursor-pointer hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
                 >
                   {item.label}
                 </a>

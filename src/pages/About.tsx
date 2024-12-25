@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Calendar, Clock, CheckCircle, X } from 'lucide-react';
+import {  Calendar, Clock, CheckCircle, X } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 
 const About = () => {
   const [count, setCount] = useState(75);
@@ -43,6 +44,14 @@ const About = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+  const handleScroll = (id: string) => {
+    const targetView = document.getElementById(id);
+    if (targetView) {
+      targetView.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {showAlert && (
@@ -58,8 +67,8 @@ const About = () => {
         </div>
       )}
 
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="text-center mb-16 space-y-6">
+      <div className="max-w-4xl mx-auto px-4 py-16 " id='about_view' >
+        <div className="text-center mb-16 space-y-6" >
           <h1 className="text-5xl font-bold text-gray-800 animate-fade-in">
             Never Miss an Exam Again
           </h1>
@@ -75,7 +84,7 @@ const About = () => {
           </div>
 
           <button
-            onClick={() => setShowAlert(true)}
+            onClick={() => handleScroll('calculator_view')}
             className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium 
                      hover:bg-blue-600 transform transition-all duration-300 hover:scale-105
                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
@@ -93,7 +102,7 @@ const About = () => {
                         hover:scale-105`}
             >
               <div className={`text-blue-500 mb-4 transition-all duration-500 
-                            ${index === activeSection ? 'rotate-12' : 'rotate-0'}`}>
+                            ${index === activeSection ? 'rotate-6' : 'rotate-0'}`}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -102,12 +111,12 @@ const About = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex items-center text-blue-500 cursor-pointer group">
             <span className="mr-2">Get Started</span>
             <ArrowRight className="transform transition-transform group-hover:translate-x-2" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
