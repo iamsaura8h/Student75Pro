@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <motion.footer 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-[#96A7E2] text-white py-4 mt-8"
+      className="bg-[#96A7E2] text-white py-2 mt-8"
     >
       <div className="max-w-screen mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-1">
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           {/* Social Links and Copyright */}
           <div className="flex items-center gap-4 text-sm text-gray-600">
             <motion.a
-              href="https://github.com/SaurabhKumar"
+              href="https://github.com/iamsaura8h/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               <Github size={18} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/saurabhkumar"
+              href="https://linkedin.com/in/saurabh-kumar-sk1107/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -2 }}
