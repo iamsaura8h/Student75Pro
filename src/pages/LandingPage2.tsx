@@ -13,6 +13,7 @@ function LandingPage2(){
         <Hero  />
         <About />
         <Calculation />
+        <Analytics />
         <Footer />
         </>
     )
