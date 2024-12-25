@@ -1,5 +1,8 @@
 // import React from 'react';
 
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 interface VideoCardProps {
   videoId: string;
   title: string;
@@ -53,7 +56,9 @@ const DSA = () => {
   ];
 
   return (
-    <div className="min-w-screen min-h-screen px-10 py-5">
+    <>
+    <Navbar />
+    <div className="min-w-screen min-h-screen px-10 py-5 mb-10">
         <h1 className="text-4xl font-giest font-semibold py-8">Best DSA Playlists</h1>
       <div className="flex flex-wrap gap-6">
         {videos.map((video) => (
@@ -61,6 +66,9 @@ const DSA = () => {
         ))}
       </div>
     </div>
+    <Footer />
+    </>
+    
   );
 };
 

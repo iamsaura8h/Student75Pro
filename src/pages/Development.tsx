@@ -1,3 +1,6 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 // Development.tsx
 interface VideoCardProps {
   videoId: string;
@@ -80,7 +83,9 @@ const Development = () => {
   ];
 
   return(
-    <div className="min-w-screen min-h-screen px-10 py-5">
+   <>
+    <Navbar />
+    <div className="min-w-screen min-h-screen mb-10 px-10 py-3">
         <h1 className="text-4xl font-giest font-semibold py-8">Best Playlists for Development</h1>
         <div className="flex flex-wrap justify-items-start gap-6">
            {videos.map((video)=>(
@@ -88,6 +93,8 @@ const Development = () => {
            ))}
         </div>
     </div>
+        <Footer />
+    </>
   );
 
 };

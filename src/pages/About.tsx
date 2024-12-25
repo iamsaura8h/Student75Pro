@@ -68,13 +68,13 @@ const About = () => {
       )}
 
       <div className="max-w-4xl mx-auto px-4 py-16 " id='about_view' >
-        <div className="text-center mb-16 space-y-6" >
+        <div className="text-center mb-16 space-y-2" >
           <h1 className="text-5xl font-bold text-gray-800 animate-fade-in">
             Never Miss an Exam Again
           </h1>
           
           <div className="relative h-32 overflow-hidden">
-            <div className="text-7xl font-bold transition-all duration-500 ease-in-out"
+            <div className="text-7xl py-3 font-bold transition-all duration-500 ease-in-out"
                  style={{ 
                    color: count < 75 ? '#EF4444' : '#10B981',
                    transform: `translateY(${count === 75 ? '0' : count < 75 ? '100%' : '-100%'}px)`,
@@ -86,7 +86,7 @@ const About = () => {
           <button
             onClick={() => handleScroll('calculator_view')}
             className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium 
-                     hover:bg-blue-600 transform transition-all duration-300 hover:scale-105
+                     hover:bg-[#96A7E2] transform transition-all duration-300 hover:scale-105
                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Calculate My Attendance

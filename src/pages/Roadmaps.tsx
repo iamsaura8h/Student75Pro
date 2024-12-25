@@ -1,7 +1,11 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 function Roadmaps() {
   return (
     <>
-      <div className="h-screen px-10 py-5">
+      <Navbar />
+      <div className="min-h-screen min-w-screen px-10">
         <h1 className="text-4xl font-giest font-semibold py-8">
           Best Roadmaps
         </h1>
@@ -22,6 +26,7 @@ function Roadmaps() {
             </a>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
