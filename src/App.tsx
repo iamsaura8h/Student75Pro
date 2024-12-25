@@ -4,6 +4,7 @@ import LandingPage2 from './pages/LandingPage2';
 import DSA from './pages/DSA';
 import Roadmaps from './pages/Roadmaps';
 import Development from './pages/Development';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/dsa" element={<DSA />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/development" element={<Development />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

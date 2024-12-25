@@ -106,7 +106,7 @@ const ShortAC: React.FC = () => {
     };
 
     return (
-      <div className="bg-white rounded-lg shadow-sm p-6 mt-6 pt-4 space-y-4">
+      <div className="bg-white rounded-lg shadow-sm p-6 mt-6 pt-4 space-y-4 font-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-blue-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Current Performance</h3>
@@ -175,7 +175,7 @@ const ShortAC: React.FC = () => {
 
   return (
     <div className="md:min-h-screen pt-8 pb-3 px-2">
-      <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl border-2 overflow-hidden">
+      <div className="w-full max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="p-8 space-y-6">
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
             <p className="text-gray-700 italic">

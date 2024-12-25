@@ -8,7 +8,7 @@ const Navbar = () => {
     { label: 'Roadmaps', href: 'roadmaps' },
     { label: 'DSA', href: ' dsa' },
     { label: 'Development', href: 'development' },
-    { label: 'Contact', href: 'contact' }
+    { label: 'About', href: 'about' }
   ];
 
   return (

@@ -2,6 +2,7 @@
 
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import About from "./About";
 import Calculation from "./Calculation";
 
 function LandingPage2(){
@@ -9,6 +10,7 @@ function LandingPage2(){
         <>
         <Navbar />
         <Hero  />
+        <About />
         <Calculation />
         </>
     )
