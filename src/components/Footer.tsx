@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
     <motion.footer 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-[#96A7E2] text-white py-2"
+      className="bg-[#96A7E2] text-white py-4 mt-8"
     >
-      <div className="max-w-screen mx-auto px-6 ">
+      <div className="max-w-screen mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-1">
           {/* Brand */}
           <div className="flex items-center gap-2">
@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Owner */}
-          <div className='font-normal font-giest '>
-            <h2>created by Saurabh </h2>
+          <div className='font-normal font-giest'>
+            <h2>created by Saurabh</h2>
           </div>
 
           {/* Social Links and Copyright */}

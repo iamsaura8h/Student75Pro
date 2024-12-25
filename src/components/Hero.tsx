@@ -9,7 +9,7 @@ function Hero() {
     <div className="flex items-center justify-between h-2/3 px-6 mt-4 lg:px-16 flex-col md:flex-row">
       {/* Left Text Section */}
       <div className="flex flex-col lg:w-2/3 space-y-4  ">
-        <h2 className="text-4xl lg:text-5xl text-black font-bold ">
+        <h2 className="text-5xl lg:text-5xl text-black font-bold ">
         College for Memories, Skills for Placements
         </h2>
         <p className="text-gray-500 text-sm font-medium">
