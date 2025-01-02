@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     <motion.footer 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-[#96A7E2] text-white py-2 mt-8"
+      className="bg-[#E1E1E1] text-gray-600 py-2 "
     >
       <div className="max-w-screen mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-1">
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <motion.img 
               src="logosvg.svg" 
               alt="logo" 
-              className="h-6 w-6"
+              className="h-4 w-4"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             />

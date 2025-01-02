@@ -15,7 +15,9 @@ export default {
       },
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
-        giest:["Geist","sans-serif"]
+        giest:["Geist","sans-serif"],
+        cabin:["Cabin","sans-serif"],
+        roboto:["Roboto","sans-serif"]
         
       },
     },

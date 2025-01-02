@@ -5,6 +5,7 @@ import DSA from './pages/DSA';
 import Roadmaps from './pages/Roadmaps';
 import Development from './pages/Development';
 import About from './pages/About';
+import Author from './pages/Author';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/development" element={<Development />} />
         <Route path="/about" element={<About />} />
+        <Route path="/author" element={<Author />} />
       </Routes>
     </Router>
   );

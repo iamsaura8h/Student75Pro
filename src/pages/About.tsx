@@ -86,7 +86,7 @@ const About = () => {
           <button
             onClick={() => handleScroll('calculator_view')}
             className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium 
-                     hover:bg-[#96A7E2] transform transition-all duration-300 hover:scale-105
+                     hover:bg-[#2862C1] transform transition-all duration-300 hover:scale-105
                      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Calculate My Attendance
