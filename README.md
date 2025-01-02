@@ -1,9 +1,10 @@
-# 📘 **Attendance Calculator**
+
+![image](https://github.com/user-attachments/assets/84a5ba95-be31-411e-bf0b-f137fb344bfd)
 
 ## 📚 **Overview**
-The **Attendance Calculator** is a smart tool designed to help students maintain a minimum attendance of 75%, which is a common academic requirement for exam eligibility. This calculator empowers students to track their attendance, plan leaves strategically, and still meet the required attendance percentage.
+**Student75** is a smart tool designed to help students maintain a minimum attendance of 75%, which is a common academic requirement for exam eligibility and make time for yourself. This calculator empowers students to track their attendance, plan leaves strategically, and still meet the required attendance percentage.
 
-With this tool, students can make informed decisions about when to take leaves and how many classes they must attend to remain compliant with academic rules. It also provides resources such as the best roadmaps, DSA, and development guides.
+With this tool, students can make informed decisions about when to take leaves and how many classes they must attend to remain compliant with academic rules. It also provides resources such as the best roadmaps, DSA, and development guides which they can utilize to up their skills for placements.
 
 ---
 
