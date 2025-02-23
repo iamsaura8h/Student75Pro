@@ -5,8 +5,9 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import About from "./About";
 import Calculation from "./Calculation";
+import Resources from "./Resources";
 
-function LandingPage2(){
+function LandingPage(){
     return(
         <>
         <Navbar />
@@ -14,9 +15,12 @@ function LandingPage2(){
         <About />
         <Calculation />
         <Analytics />
+        <div className="hidden md:block">
+            <Resources />
+        </div>
         <Footer />
         </>
     )
 }
 
-export default LandingPage2;
+export default LandingPage;
