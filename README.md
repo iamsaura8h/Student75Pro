@@ -1,9 +1,10 @@
-# 📘 **Attendance Calculator**
+
+![image](https://github.com/user-attachments/assets/84a5ba95-be31-411e-bf0b-f137fb344bfd)
 
 ## 📚 **Overview**
-The **Attendance Calculator** is a smart tool designed to help students maintain a minimum attendance of 75%, which is a common academic requirement for exam eligibility. This calculator empowers students to track their attendance, plan leaves strategically, and still meet the required attendance percentage.
+**Student75** is a smart tool designed to help students maintain a minimum attendance of 75%, which is a common academic requirement for exam eligibility and make time for yourself. This calculator empowers students to track their attendance, plan leaves strategically, and still meet the required attendance percentage.
 
-With this tool, students can make informed decisions about when to take leaves and how many classes they must attend to remain compliant with academic rules.
+With this tool, students can make informed decisions about when to take leaves and how many classes they must attend to remain compliant with academic rules. It also provides resources such as the best roadmaps, DSA, and development guides which they can utilize to up their skills for placements.
 
 ---
 
@@ -21,13 +22,14 @@ With this tool, students can make informed decisions about when to take leaves a
 - **Projected Attendance**: See the attendance percentage if you attend all the remaining classes.
 - **Impact of Additional Days**: Check how attending one more day impacts your overall attendance percentage.
 
-### 🗓️ **Guidance for Leave Planning**
+### 📏 **Guidance for Leave Planning**
 - **Additional Days Needed**: Find out how many more days you need to attend to achieve a 75% attendance rate.
 - **Remaining Leaves**: Discover how many days you can skip while still maintaining 75% attendance.
 
-### 🚀 **Interactive & Dynamic**
-- Real-time updates as users input details.
-- Simple and user-friendly interface with actionable insights.
+### 📚 **Resources for Learning**
+- **Free and Trusted Playlists**: Explore expertly curated playlists, trusted by countless students for mastering key concepts.
+- **Handpicked Guides**: Access the best resources carefully selected to align with your learning goals and skill-building journey.
+
 
 ### 💡 **Tailored Advice**
 - Get specific advice based on your attendance status, like whether you need to attend extra days or if you have room to take leaves.
@@ -51,7 +53,7 @@ With this tool, students can make informed decisions about when to take leaves a
 3. **Actionable Insights**
    - If your attendance is below 75%, the app tells you how many extra days you need to attend.
    - If your attendance is above 75%, the app shows how many leaves you can take while still maintaining 75% attendance.
-   
+
 ---
 
 ## 🧮 **Example Usage**
@@ -79,7 +81,7 @@ With this tool, students can make informed decisions about when to take leaves a
 
 ---
 
-## 🧩 **Core Components**
+## 🧪 **Core Components**
 
 1. **Input Form**
    - Collects data from users about total days, hosted days, and attended days.
@@ -118,15 +120,15 @@ With this tool, students can make informed decisions about when to take leaves a
 ## 📦 **Project Structure**
 ```
 📦attendance-calculator
- ┣ 📂public
- ┣ 📂src
- ┃ ┣ 📂components
- ┃ ┃ ┗ 📜AttendanceCalculator.tsx
- ┃ ┣ 📂styles
- ┃ ┣ 📜App.tsx
- ┃ ┗ 📜index.tsx
- ┣ 📜package.json
- ┗ 📜README.md
+ ├ 🗂public
+ ├ 🗂src
+ ├ ┃ 🗂components
+ ├ ┃ ┃ ↳ AttendanceCalculator.tsx
+ ├ ┃ 🗂styles
+ ├ ┃ ┃ App.tsx
+ ├ ┃ ┃ index.tsx
+ ├ 🗂package.json
+ ├ 🗂README.md
 ```
 
 ---
@@ -164,4 +166,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions, suggestions, or feedback, feel free to reach out!
 
 Happy Learning! 🚀
-
