@@ -15,7 +15,7 @@ function LandingPage(){
         <About />
         <Calculation />
         <Analytics />
-        <div className="hidden md:block">
+        <div className="md:hidden">
             <Resources />
         </div>
         <Footer />

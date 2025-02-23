@@ -1,4 +1,11 @@
-const VideoCard = ({ videoId, title, subtitle, domain }) => (
+interface VideoCardProps {
+  videoId: string;
+  title: string;
+  subtitle: string;
+  domain?: string; 
+}
+
+const VideoCard = ({ videoId, title, subtitle, domain }: VideoCardProps) => (
   <div className="w-full md:w-1/4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
     <a
       href={`https://www.youtube.com/watch?v=${videoId}`}
@@ -41,24 +48,10 @@ const Resources = () => {
   return (
     <>
     <div>
-        <h1 className="text-6xl text-white bg-gradient-to-tl from-[#2F1A31] via-[#1B2D35] to-[#68456E] py-7 text-center">Resources</h1>
+        <h1 className="text-4xl text-[#ECF3F2] bg-gradient-to-t from-black to-gray-700 py-10 text-center">Resources</h1>
     </div>
       <div className="min-w-screen min-h-screen px-10 py-5 mb-10">
-        <h1 className="text-4xl font-semibold py-8">Best DSA Playlists</h1>
-        <div className="flex flex-wrap gap-6">
-          {dsaVideos.map((video) => (
-            <VideoCard key={video.videoId} {...video} />
-          ))}
-        </div>
-
-        <h1 className="text-4xl font-semibold py-8">Best Development Playlists</h1>
-        <div className="flex flex-wrap gap-6">
-          {devVideos.map((video) => (
-            <VideoCard key={video.videoId} {...video} />
-          ))}
-        </div>
-
-        <h1 className="text-4xl font-semibold py-8">Best Roadmaps</h1>
+      <h1 className="text-4xl font-semibold py-8">Best Roadmaps</h1>
         <div className="flex flex-wrap gap-6">
           <a href="https://roadmap.sh/" target="_blank">
             <img
@@ -75,6 +68,21 @@ const Resources = () => {
             />
           </a>
         </div>
+        <h1 className="text-4xl font-semibold py-8">Best DSA Playlists</h1>
+        <div className="flex flex-wrap gap-6">
+          {dsaVideos.map((video) => (
+            <VideoCard key={video.videoId} {...video} />
+          ))}
+        </div>
+
+        <h1 className="text-4xl font-semibold py-8">Best Development Playlists</h1>
+        <div className="flex flex-wrap gap-6">
+          {devVideos.map((video) => (
+            <VideoCard key={video.videoId} {...video} />
+          ))}
+        </div>
+
+        
       </div>
       
     </>
